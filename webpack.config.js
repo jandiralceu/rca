@@ -42,7 +42,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpe?g|gif|webm|mp4|svg)$/,
-        type: 'asset' // use asset/resource to include always in a separated directory
+        type: 'asset'
       }
     ]
   },
@@ -50,9 +50,12 @@ module.exports = {
     runtimeChunk: 'single'
   },
   devServer: {
-    contentBase: './dist',
+    static: {
+      directory: path.join(__dirname, 'dist')
+    },
     hot: true,
-    historyApiFallback: true
+    historyApiFallback: true,
+    compress: true
   },
   externals: {
     react: 'React',
