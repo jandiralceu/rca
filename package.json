@@ -1,5 +1,5 @@
 {
-  "name": "react_chat",
+  "name": "rca",
   "version": "0.0.1",
   "license": "MIT",
   "author": {
@@ -7,7 +7,7 @@
     "email": "me@jandir.co",
     "url": "https://jandir.co"
   },
-  "description": "React clean architecture boilerplate",
+  "description": "RCA - React Clean Architecture",
   "keywords": [
     "react",
     "javascript",
@@ -17,10 +17,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/jandiralceu/react-clean-architecture-boilerplate.git"
+    "url": "https://github.com/jandiralceu/rca.git"
   },
   "bugs": {
-    "url": "https://github.com/jandiralceu/react-clean-architecture-boilerplate/issues",
+    "url": "https://github.com/jandiralceu/rca/issues",
     "email": "me@jandir.co"
   },
   "scripts": {
