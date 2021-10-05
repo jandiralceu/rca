@@ -4,4 +4,3 @@
 
 yarn lint:check
 yarn test:ci
-
