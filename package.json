@@ -23,13 +23,15 @@
     "url": "https://github.com/jandiralceu/rca/issues",
     "email": "me@jandir.co"
   },
+  "homepage": "https://rca.github.com",
   "scripts": {
     "develop": "webpack serve",
     "lint:eslint": "node_modules/.bin/eslint --ext .ts,.tsx --fix ./src",
     "lint:prettier": "prettier --write ./src",
     "lint:check": "prettier --check ./src",
     "build": "webpack",
-    "stats": "webpack --json build-stats.json"
+    "stats": "webpack --json build-stats.json",
+    "prepare": "husky install"
   },
   "dependencies": {
     "react": "^17.0.2",
@@ -58,7 +60,10 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-react": "^7.26.1",
+    "git-commit-msg-linter": "^3.2.8",
     "html-webpack-plugin": "^5.3.2",
+    "husky": "^7.0.0",
+    "lint-staged": "^11.2.0",
     "mini-css-extract-plugin": "^2.3.0",
     "postcss": "^8.3.9",
     "postcss-loader": "^6.1.1",
@@ -72,5 +77,12 @@
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2",
     "webpack-visualizer-plugin": "^0.1.11"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "yarn lint:eslint",
+      "yarn lint:prettier",
+      "yarn test:staged"
+    ]
   }
 }
